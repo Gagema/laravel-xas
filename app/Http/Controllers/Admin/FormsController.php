@@ -9,6 +9,7 @@ use App\Models\Forms;
 use App\Models\foods;
 use App\Models\Calendario;
 use App\Models\reservas;
+use App\Models\recomendado;
 
 class FormsController extends Controller
 {
@@ -59,10 +60,11 @@ class FormsController extends Controller
         return redirect()->route('fazerlogin.index');
     }
    }
-   public function RespostasAdmin1(Request $request){
+   public function RespostasAdmin1(Request $request,foods $food){
     $data= $request->all();
+    $forms=$food->all();
     if ($data['food']==='food'){
-        return view('site/food');
+        return view('site/foodview',compact('forms'));
     }
     else{
         return redirect()->route('fazerlogin.index');
@@ -73,6 +75,16 @@ class FormsController extends Controller
     $res=$res->all();
     if ($data['reservas']==='reservas'){
         return view('site/reservasadm',compact('res'));
+    }
+    else{
+        return redirect()->route('fazerlogin.index');
+    }
+   }
+   public function RespostasAdmin3(Request $request, recomendado $recomend){
+    $data= $request->all();
+    $recomend=$recomend->all();
+    if ($data['recomendacoes']==='recomendacoes'){
+        return view('site/recomendados',compact('recomend'));
     }
     else{
         return redirect()->route('fazerlogin.index');

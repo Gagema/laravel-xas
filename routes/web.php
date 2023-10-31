@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\CalendarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FoodsController;
 use App\Http\Controllers\Admin\ReservasController;
+use App\Http\Controllers\Admin\ConvidadosController;
+use App\Http\Controllers\Admin\RecomendadoController;
 Route::put('/{id}',[FormsController::class,'editaragenda'])->name('editaragenda.index');
 Route::put('/food/{id}',[FormsController::class,'editarfood'])->name('editarfood.index');
 Route::get('/formulario', [FormsController::class,'formulario'])->name('formulario.index');
@@ -17,6 +19,7 @@ Route::post('/login1', [FormsController::class,'fazerlogin'])->name('fazerlogin.
 Route::post('/admin1',[FormsController::class,'RespostasAdmin'])->name('respostasadmin.index');
 Route::post('/admin2',[FormsController::class,'RespostasAdmin1'])->name('respostasadmin1.index');
 Route::post('/admin3',[FormsController::class,'RespostasAdmin2'])->name('respostasadmin2.index');
+Route::post('/admin4',[FormsController::class,'RespostasAdmin3'])->name('respostasadmin3.index');
 Route::post('/agendaCRUD',[CalendarioController::class,'inseriragenda'])->name('inseriragenda.index');
 Route::get('/agenda',[CalendarioController::class,'agenda'])->name('agenda.index');
 Route::get('/',[FormsController::class,'paginapublica'])->name('paginainicial.index');
@@ -34,7 +37,23 @@ Route::put('/fazerreserva/{id}/{nome}', [ReservasController::class, 'inserirrese
 Route::get('admin/reservaaprovar/{id}', [ReservasController::class, 'aprovar'])->name('aprovar.index');
 Route::get('admin/reservanegar/{id}', [ReservasController::class, 'negar'])->name('negar.index');
 Route::put('/verreserva/{nome}', [ReservasController::class, 'verreserva'])->name('verreserva.index');
-
+Route::get('/festa/{id}', [ReservasController::class, 'prefesta'])->name('prefesta.index');
+Route::get('/festa/convidados/{id}', [ConvidadosController::class, 'novoconvidado'])->name('convidados.index');
+Route::put('/festa/novosconvidados/{id}', [ConvidadosController::class, 'novosconvidados'])->name('novosconvidados.index');
+Route::put('/festa/verconvidados/{id}', [ConvidadosController::class, 'verconvidados'])->name('verconvidados.index');
+Route::get('/delete/convidado/{id}/{id_festa}', [ConvidadosController::class, 'deleteconvidado'])->name('deleteconvidado.index');
+Route::put('/festa/vercomida/{id}', [FoodsController::class, 'verpacotedecomida'])->name('verpacotedecomida.index');
+Route::put('/festa/alterarcomida/{id}/{titulo}', [FoodsController::class, 'mudarcomida'])->name('mudarcomida.index');
+Route::get('/festa/comidaalterada/{id}/{titulo}', [FoodsController::class, 'alterarcomida'])->name('alterarcomida.index');
+Route::post('/inserircomida',[FoodsController::class,'novacomida'])->name('novafood.index');
+Route::put('/cancelarreserva/{id}',[ReservasController::class,'cancelarreserva'])->name('cancelarreserva.index');
+Route::put('/cancelarreservaadm/{id}',[ReservasController::class,'cancelaradm'])->name('cancelaradm.index');
+Route::post('/inserirrecomedacao',[RecomendadoController::class,'novarecomedacao'])->name('novarecomendacao.index');
+Route::post('/inserirnovarecomedacao',[RecomendadoController::class,'inserirrecomendacao'])->name('inserirrecomendacao.index');
+Route::post('/verrecomendados',[RecomendadoController::class,'verrecomendados'])->name('verrecomendados.index');
+Route::get('/editarrecomendados/{id}',[RecomendadoController::class,'updaterecomendados'])->name('updaterecomendados.index');
+Route::put('/atualizarrecomendados/{id}',[RecomendadoController::class,'atualizarrecomendados'])->name('atualizarrecomendacao.index');
+Route::get('/deletararrecomendados/{id}',[RecomendadoController::class,'deleterecomendados'])->name('deleterecomendados.index');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

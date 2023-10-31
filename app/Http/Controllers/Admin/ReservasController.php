@@ -58,4 +58,26 @@ class ReservasController extends Controller
         $res=$res->where('login',$nome)->get();
         return view('site/verreservas',compact('res'));
      }
+     public function prefesta(string|int $id,reservas $res){
+        $res=$res->where('id',$id)->first();
+        return view('site/prefesta',compact('res'));
+     }
+     public function cancelarreserva(string|int $id,reservas $res, Request $request,Calendario $cal){
+        $data=$request->all();
+        if($data['cancelarreserva']=='cancelarreserva'){
+        $res=$res->where('id',$id)->first();
+        $cal=$cal->create($res->only(['data','hora_inicial','hora_final']));
+        $res->delete();
+        return view('site/login');}
+     }
+     public function cancelaradm(string|int $id,reservas $res, Request $request,Calendario $cal){
+        $data=$request->all();
+        if($data['cancelarreserva']=='cancelarreserva'){
+        $res=$res->where('id',$id)->first();
+       
+        $cal=$cal->create($res->only(['data','hora_inicial','hora_final']));
+        $res->delete();
+        $res=$res->all();
+        return view('site/reservasadm',compact('res'));}
+     }
 }
