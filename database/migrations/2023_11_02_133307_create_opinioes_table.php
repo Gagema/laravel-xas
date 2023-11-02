@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('convidados', function (Blueprint $table) {
+        Schema::create('opinioes', function (Blueprint $table) {
             $table->id();
-            $table->integer("id_festa");
-            $table->string("nome_convidado");
-            $table->string("CPF");
-            $table->integer("idade");
-            $table->enum('status',['confirmado','presente']);
+            $table->string('nome_aniversariante');
+            $table->enum('resultado',['Muito bom','Bom','Regular','Ruim','Muito ruim']);
+            $table->string('justifique');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('convidados');
+        Schema::dropIfExists('opinioes');
     }
 };
