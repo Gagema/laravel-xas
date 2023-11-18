@@ -1,4 +1,4 @@
-<h1>FABRICA DE SORRISOS</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 
 <a class="botao" id="login" href="{{route('login.index')}}">LOGIN</a>
 <a class="botao" id="agenda" href="{{route('agenda.index')}}">AGENDA</a>
@@ -31,4 +31,16 @@
         font-size: 16px; /* Tamanho da fonte */
         border-radius: 5px; /* Borda arredondada */
         transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+    }
+
+    #login {
+        position: absolute;
+        left: 700px;
+        top: 500px;
+    }
+
+    #agenda {
+        position: absolute;
+        left: 1000px;
+        top: 500px;
     }

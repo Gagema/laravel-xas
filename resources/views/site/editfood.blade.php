@@ -1,4 +1,5 @@
-<h1>Data {{$form->id}}</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
+<h2>Data {{$form->id}}</h2>
 <form action="{{route('editarfood.index', $form->id)}}" method="POST" enctype="multipart/form-data">
     @csrf()  
     @method('put')
@@ -34,3 +35,14 @@
     
     <button type="submit" name="Agenda">Enviar</button>
 </form>
+
+<style>
+    h1 {
+        background: #6341B4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+        font-family: 'Fredoka One', cursive;
+        color: white;
+    }
