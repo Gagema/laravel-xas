@@ -1,7 +1,7 @@
 <h1>FABRICA DE SORRISOS</h1>
 
-<a class="botao" href="{{route('login.index')}}">LOGIN</a>
-<a class="botao" href="{{route('agenda.index')}}">AGENDA</a>
+<a class="botao" id="login" href="{{route('login.index')}}">LOGIN</a>
+<a class="botao" id="agenda" href="{{route('agenda.index')}}">AGENDA</a>
 
 <style>
     *{
