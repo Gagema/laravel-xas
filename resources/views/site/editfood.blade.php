@@ -3,11 +3,11 @@
 <form action="{{route('editarfood.index', $form->id)}}" method="POST" enctype="multipart/form-data">
     @csrf()  
     @method('put')
-    <input type="file" name="Foto1">
-    <input type="file" name="Foto2">
-    <input type="file" name="Foto3">
-    <input type="text" name="titulo" plachegolder="Título do pacote">
-    <input type="number" name="preço" placeholder="preço do pacote">
+    <input class="botao" type="file" name="Foto1">
+    <input class="botao" type="file" name="Foto2">
+    <input class="botao" type="file" name="Foto3">
+    <input class="botao" type="text" name="titulo" placeholder="Título do pacote">
+    <input class="botao" type="number" name="preço" placeholder="Preço do pacote">
     <div id="lista de comidas">
     <p> Insira a lista de comidas</p>
     <textarea id="editor" name="lista_comidas"></textarea>
@@ -37,6 +37,14 @@
 </form>
 
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: #2B1F31;
+    }
+
     h1 {
         background: #6341B4;
         display: flex;
@@ -44,5 +52,23 @@
         align-items: center;
         height: 12vh;
         font-family: 'Fredoka One', cursive;
+        color: white;
+    }
+    .botao {
+        display: inline-block; /* Transforma o link em um elemento de bloco */
+        padding: 10px 20px; /* Adapte o preenchimento conforme necessário */
+        text-decoration: none; /* Remove o sublinhado padrão dos links */
+        background-color: #fff; /* Cor de fundo */
+        color: #000; /* Cor do texto */
+        font-size: 16px; /* Tamanho da fonte */
+        border-radius: 5px; /* Borda arredondada */
+        transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+    }
+
+    p {
+        color: white;
+    }
+
+    h2 {
         color: white;
     }

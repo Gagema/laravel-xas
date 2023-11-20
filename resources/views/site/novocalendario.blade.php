@@ -1,4 +1,4 @@
-<h1>ADMINISTRATIVO</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <form action="{{route('inseriragenda.index')}}" method="POST">
     @csrf()  
     <input class="timedate" type="date" placeholder="data" name="data">

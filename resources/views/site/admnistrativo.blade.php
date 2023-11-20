@@ -1,4 +1,4 @@
-<h1>ADMINISTRATIVO</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <form action="{{route('respostasadmin.index')}}" method="POST">
     @csrf()
     <input type="hidden" value="Agenda" name="NovaAgenda">

@@ -1,4 +1,4 @@
-<h1>OPERACIONAL</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <form action="{{route('reservasoperacional.index')}}" method="POST">
     @csrf()
     <input type="hidden" name="reservas" value="reservas">
