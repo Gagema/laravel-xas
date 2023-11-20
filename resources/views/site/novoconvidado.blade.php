@@ -28,74 +28,63 @@
 </script>
 
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: #2B1F31;
+    }
 
-        body {
-            background: #2B1F31;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh; /* Ocupa a altura total da viewport */
-        }
+    h1 {
+        background: #6341B4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+        font-family: 'Fredoka One', cursive;
+        color: white;
+    }
 
-        h1 {
-            
-            background: #6341B4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 12vh;
-            font-family: 'Fredoka One', cursive;
-            color: white;
-            width: 100%; /* Ocupa a largura total da tela */
-            position: fixed;
-            top: 0;
-            left: 0;
-            border-radius: 0 0 10px 10px; /* Adiciona bordas arredondadas apenas na parte inferior */
-        }
+    button {
+        background-color: #C4FF10;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-        #numero {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-
-        #inserir {
-            text-align: center;
+    form {
             margin-bottom: 20px;
         }
 
-        .wrapper {
-            
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-           
-            align-items: center;
-           
-        }
-      
-
-        input[type="text"],
-        input[type="number"] {
+        table {
             width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
-        button {
-            background-color: #4CAF50;
-            color: #000;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            padding: 10px;
-            cursor: pointer;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: white; /* Adiciona o fundo branco */
         }
+
+        th {
+            color: black;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        #numero {
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
