@@ -1,4 +1,4 @@
-<h1>ADMINISTRAÇÃO</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <table width="100%" border="1px">
     <thread>
       <th>Nome do Aniversariante</th>

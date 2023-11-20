@@ -1,4 +1,4 @@
-<h1>EDITAR DATA {{$form->id}}</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <form action="{{route('editaragenda.index', $form->id)}}" method="POST">
     @csrf()  
     @method('put')

@@ -1,4 +1,4 @@
-<h1>FESTA {{$res->id}}</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <input id="numero" type="number" placeholder="Insira a quantidade de convidados" value="0">
 <p id="inserir"></p>
 
@@ -26,3 +26,65 @@
     $wrapper.innerHTML = HTMLTemporario;
     }}});
 </script>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: #2B1F31;
+    }
+
+    h1 {
+        background: #6341B4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+        font-family: 'Fredoka One', cursive;
+        color: white;
+    }
+
+    button {
+        background-color: #C4FF10;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: white; /* Adiciona o fundo branco */
+        }
+
+        th {
+            color: black;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        #numero {
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
