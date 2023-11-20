@@ -41,12 +41,12 @@
 
     #reserv {
         position: absolute;
-        left: 700px;
-        top: 500px;
+        left: 500px;
+        top: 300px;
     }
 
     #data {
         position: absolute;
-        left: 1000px;
-        top: 500px;
+        left: 800px;
+        top: 300px;
     }

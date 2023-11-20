@@ -85,42 +85,42 @@
 
     #novoconv {
         position: absolute;
-        left: 390px;
-        top: 250px;
+        left: 190px;
+        top: 150px;
     }
 
     #vconv {
         position: absolute;
-        left: 850px;
-        top: 250px;
+        left: 650px;
+        top: 150px;
     }
 
     #vcomida {
         position: absolute;
-        left: 1350px;
-        top: 250px;
+        left: 1150px;
+        top: 150px;
     }
 
     #cancelar {
         position: absolute;
-        left: 390px;
-        top: 500px;
+        left: 190px;
+        top: 400px;
     }
 
     #vrecom {
         position: absolute;
-        left: 850px;
-        top: 500px;
+        left: 650px;
+        top: 400px;
     }
 
     #opiniao {
         position: absolute;
-        left: 1350px;
-        top: 500px;
+        left: 1150px;
+        top: 400px;
     }
 
     p {
         position: absolute;
-        left: 750px;
-        top: 750px;
+        left: 550px;
+        top: 650px;
     }

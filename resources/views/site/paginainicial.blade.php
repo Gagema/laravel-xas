@@ -35,12 +35,12 @@
 
     #login {
         position: absolute;
-        left: 700px;
-        top: 500px;
+        left: 550px;
+        top: 300px;
     }
 
     #agenda {
         position: absolute;
-        left: 1000px;
-        top: 500px;
+        left: 850px;
+        top: 300px;
     }

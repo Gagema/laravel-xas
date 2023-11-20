@@ -50,18 +50,18 @@
 
     #cardapio {
         position: absolute;
-        left: 400px;
-        top: 500px;
+        left: 200px;
+        top: 300px;
     }
 
     #reserva {
         position: absolute;
-        left: 900px;
-        top: 500px;
+        left: 700px;
+        top: 300px;
     }
 
     #vreserva {
         position: absolute;
-        left: 1400px;
-        top: 500px;
+        left: 1200px;
+        top: 300px;
     }

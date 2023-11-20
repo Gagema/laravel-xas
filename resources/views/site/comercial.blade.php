@@ -52,24 +52,24 @@
 
     #cardapio {
         position: absolute;
-        left: 600px;
-        top: 300px;
+        left: 400px;
+        top: 100px;
     }
 
     #agenda {
         position: absolute;
-        left: 600px;
-        top: 600px;
+        left: 400px;
+        top: 400px;
     }
 
     #reservas {
         position: absolute;
-        left: 1200px;
-        top: 300px;
+        left: 1000px;
+        top: 100px;
     }
 
     #recomendacoes {
         position: absolute;
-        left: 1200px;
-        top: 600px;
+        left: 1000px;
+        top: 400px;
     }

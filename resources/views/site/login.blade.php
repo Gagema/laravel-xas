@@ -47,8 +47,8 @@
         border-radius: 5px; /* Borda arredondada */
         transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
         position: absolute;
-        left: 980px;
-        top: 450px;
+        left: 800px;
+        top: 250px;
     }
 
     .botao3 {
@@ -61,20 +61,20 @@
         border-radius: 5px; /* Borda arredondada */
         transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
         position: absolute;
-        left: 750px;
-        top: 525px;
+        left: 550px;
+        top: 325px;
         width: 310px;
         text-align: center;
     }
 
     #login {
         position: absolute;
-        left: 750px;
-        top: 425px;
+        left: 550px;
+        top: 225px;
     }
 
     #senha {
         position: absolute;
-        left: 750px;
-        top: 475px;
+        left: 550px;
+        top: 275px;
     }

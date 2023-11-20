@@ -57,30 +57,30 @@
 
     #agenda {
         position: absolute;
-        top: 400px;
-        left: 390px;
+        top: 200px;
+        left: 190px;
     }
 
     #cardapio {
         position: absolute;
-        top: 400px;
-        left: 850px;
+        top: 200px;
+        left: 650px;
     }
 
     #reservas {
         position: absolute;
-        top: 600px;
-        left: 600px;
+        top: 400px;
+        left: 400px;
     }
 
     #recomendacoes {
         position: absolute;
-        top: 400px;
-        left: 1350px;
+        top: 200px;
+        left: 1150px;
     }
 
     #opiniao {
         position: absolute;
-        top: 600px;
-        left: 1100px;
+        top: 400px;
+        left: 900px;
     }

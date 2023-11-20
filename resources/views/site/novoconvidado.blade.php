@@ -2,7 +2,7 @@
 <input id="numero" type="number" placeholder="Insira a quantidade de convidados" value="0">
 <p id="inserir"></p>
 
-<form action="{{route('novosconvidados.index', $res->id )}}" method="POST">
+<form action="{{route('novosconvidados.index', $res->id )}}" method="POST" class="fixar">
     @method('put')
     @csrf()
    <div class="wrapper">
@@ -44,6 +44,7 @@
         }
 
         h1 {
+            
             background: #6341B4;
             display: flex;
             justify-content: center;
@@ -71,11 +72,15 @@
         }
 
         .wrapper {
+            
             width: 80%;
             display: flex;
             flex-direction: column;
+           
             align-items: center;
+           
         }
+      
 
         input[type="text"],
         input[type="number"] {
