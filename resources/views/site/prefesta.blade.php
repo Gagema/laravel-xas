@@ -1,6 +1,6 @@
-<h1>FESTA {{$res->id}}</h1>
+<h1>FÁBRICA DE SORRISOS</h1>
 <br>
-<a href="{{route('convidados.index', $res->id )}}">Novo convidado</a>
+<a class="botao" id="novoconv" href="{{route('convidados.index', $res->id )}}">Novo convidado</a>
 </br>
 <br>
 <p>Link para convidados: localhost:8989/festa/convidados/{{$res->id}}</p>
@@ -10,7 +10,7 @@
     @method('put')
     @csrf()
     <input type="hidden" value="convidado" name="convidado">
-    <button type="submit"> ver convidados</button>
+    <button class="botao" id="vconv" type="submit"> ver convidados</button>
 </form>
 </br>
 </br>
@@ -19,26 +19,108 @@
     @method('put')
     @csrf()
     <input type="hidden" value="pacotedecomida" name="pacotedecomida">
-    <button type="submit"> Ver pacote de comida escolhido</button>
+    <button class="botao" id="vcomida" type="submit"> Ver pacote de comida escolhido</button>
 </form>
 </br>
 <form action="{{route('cancelarreserva.index', $res->id )}}" method="POST">
     @method('put')
     @csrf()
     <input type="hidden" value="cancelarreserva" name="cancelarreserva">
-    <button type="submit"> Cancelar</button>
+    <button class="botao" id="cancelar" type="submit"> Cancelar</button>
 </form>
 </br>
 <br>
 <form action="{{route('verrecomendados.index' )}}" method="POST">
     @csrf()
     <input type="hidden" value="recomendados" name="recomendados">
-    <button type="submit"> Ver recomendados</button>
+    <button class="botao" id="vrecom" type="submit"> Ver recomendados</button>
 </form>
 <form action="{{route('opiniao.index',$res->id )}}" method="POST">
     @method('put')
     @csrf()
     <input type="hidden" value="opiniao" name="opiniao">
-    <button type="submit"> Dê sua opinião</button>
+    <button class="botao" id="opiniao" type="submit"> Dê sua opinião</button>
 </form>
 </br>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: #2B1F31;
+    }
+
+    h1 {
+        background: #6341B4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+        font-family: 'Fredoka One', cursive;
+        color: white;
+    }
+    .botao {
+        display: inline-block; /* Transforma o link em um elemento de bloco */
+        padding: 10px 20px; /* Adapte o preenchimento conforme necessário */
+        text-decoration: none; /* Remove o sublinhado padrão dos links */
+        background-color: #C4FF10; /* Cor de fundo */
+        color: #000; /* Cor do texto */
+        font-size: 16px; /* Tamanho da fonte */
+        border-radius: 5px; /* Borda arredondada */
+        transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+    }
+
+    p {
+        display: inline-block; /* Transforma o link em um elemento de bloco */
+        padding: 10px 20px; /* Adapte o preenchimento conforme necessário */
+        text-decoration: none; /* Remove o sublinhado padrão dos links */
+        background-color: blue; /* Cor de fundo */
+        color: #FFF; /* Cor do texto */
+        font-size: 16px; /* Tamanho da fonte */
+        border-radius: 5px; /* Borda arredondada */
+        transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+    }
+
+    #novoconv {
+        position: absolute;
+        left: 390px;
+        top: 250px;
+    }
+
+    #vconv {
+        position: absolute;
+        left: 850px;
+        top: 250px;
+    }
+
+    #vcomida {
+        position: absolute;
+        left: 1350px;
+        top: 250px;
+    }
+
+    #cancelar {
+        position: absolute;
+        left: 390px;
+        top: 500px;
+    }
+
+    #vrecom {
+        position: absolute;
+        left: 850px;
+        top: 500px;
+    }
+
+    #opiniao {
+        position: absolute;
+        left: 1350px;
+        top: 500px;
+    }
+
+    p {
+        position: absolute;
+        left: 750px;
+        top: 750px;
+    }

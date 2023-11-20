@@ -62,3 +62,7 @@
         border-radius: 5px; /* Borda arredondada */
         transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
     }
+
+    p {
+        color: white;
+    }
