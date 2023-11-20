@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Forms;
 use App\Models\foods;
 use App\Models\Calendario;
+use App\Models\convidados;
 use App\Models\reservas;
 
 class ReservasController extends Controller
@@ -84,4 +85,9 @@ class ReservasController extends Controller
         $res=$res->where('status','aprovado')->get();
         return view('site/verreservasoperacional',compact('res'));
      }
+     public function datasoperacional(reservas $res, convidados $cos){
+      $res=$res->where('status','aprovado')->get();
+      $cos=$cos->all();
+      return view('site/verdatasoperacional',compact('res','cos'));
+   }
 }
