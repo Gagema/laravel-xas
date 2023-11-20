@@ -1,22 +1,25 @@
 <h1>FÁBRICA DE SORRISOS</h1>
 <table width="100%" border="1px">
-  <thread>
-    <th>Data</th>
-    <th>Hora de início</th>
-    <th>Hora de término</th>
-  </thread>
-  <tbody>
-        @foreach($forms as $forms)
-           <tr>
-            <td>{{$forms->data}}</td>
-            <td>{{$forms->hora_inicial}}</td>
-            <td>{{$forms->hora_final}}</td>
-           </tr>
-        @endforeach
-  </tbody>
-</table>
+    <thread>
+      <th>Nome do Aniversariante</th>
+      <th>Resultado da pesquisa        </th>
+      <th> Justificativa</th>
+      
+    </thread>
+    <tbody>
+          @foreach($op as $op)
+             
+             <tr>
+              <td>{{$op->nome_aniversariante}}</td>
+              <td>{{$op->resultado}}</td>
+              <td>{{$op->justifique}}</td>
+              </tr>
+              
+          @endforeach
+    </tbody>
+  </table>
 
-<style>
+  <style>
     *{
         margin: 0;
         padding: 0;
@@ -33,8 +36,7 @@
         height: 12vh;
         font-family: 'Fredoka One', cursive;
         color: white;
-    }    
-    
+    }
     form {
             margin-bottom: 20px;
         }

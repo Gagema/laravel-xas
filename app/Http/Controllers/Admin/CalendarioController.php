@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Calendario;
+use App\Models\Forms;
 class CalendarioController extends Controller
 {
     public function inseriragenda(Calendario $forms, Request $request){
@@ -34,5 +35,11 @@ class CalendarioController extends Controller
         else{
             return back();
         }
+    }
+    public function calendarioreserva(Calendario $forms, string|int $nome, Forms $usu ){
+        $usu=$usu->where('nome',$nome)->first();
+        $forms=$forms->all();
+        return view('site/agendareserva',compact('forms','usu'));
+       
     }
 }

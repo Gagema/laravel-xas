@@ -27,5 +27,19 @@ class DatabaseSeeder extends Seeder
             'status'=>'d'
 
         ]);
+        Forms::factory()->create([
+            'id'=>'10',
+            'nome'=> 'gabriel3',
+            'senha'=> Hash::make('12345'),
+            'status'=>'o'
+
+        ]);
+        Forms::factory()->create([
+            'id'=>'11',
+            'nome'=> 'gabriel4',
+            'senha'=> Hash::make('12345'),
+            'status'=>'c'
+
+        ]);
     }
 }

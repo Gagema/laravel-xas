@@ -1,20 +1,27 @@
 <h1>FÁBRICA DE SORRISOS</h1>
+<form action="{{route('novarecomendacao.index')}}" method="POST">
+    @csrf()
+    <input type="hidden" value="recomendacao" name="recomendacao">
+    <button type="submit"> Nova Recomendação</button>
+</form>
 <table width="100%" border="1px">
   <thread>
-    <th>Data</th>
-    <th>Hora de início</th>
-    <th>Hora de término</th>
+    <th>recomendações</th>
+    
   </thread>
   <tbody>
-        @foreach($forms as $forms)
+       
+        @foreach($recomend as $recomend)
+          
            <tr>
-            <td>{{$forms->data}}</td>
-            <td>{{$forms->hora_inicial}}</td>
-            <td>{{$forms->hora_final}}</td>
+           <td>{{$recomend->recomendacoes}}</td>
+           <td><a href="{{route('updaterecomendados.index',$recomend->id)}}">Editar</a>
+            <td><a href="{{route('deleterecomendados.index',$recomend->id)}}">Delete</a>
+           
            </tr>
+           
         @endforeach
-  </tbody>
-</table>
+</tbody>
 
 <style>
     *{
@@ -33,8 +40,8 @@
         height: 12vh;
         font-family: 'Fredoka One', cursive;
         color: white;
-    }    
-    
+    }
+
     form {
             margin-bottom: 20px;
         }
@@ -59,3 +66,12 @@
         tr:hover {
             background-color: #f5f5f5;
         }
+
+        button {
+        background-color: #C4FF10;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }

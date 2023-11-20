@@ -1,20 +1,10 @@
 <h1>FÁBRICA DE SORRISOS</h1>
-<table width="100%" border="1px">
-  <thread>
-    <th>Data</th>
-    <th>Hora de início</th>
-    <th>Hora de término</th>
-  </thread>
-  <tbody>
-        @foreach($forms as $forms)
-           <tr>
-            <td>{{$forms->data}}</td>
-            <td>{{$forms->hora_inicial}}</td>
-            <td>{{$forms->hora_final}}</td>
-           </tr>
-        @endforeach
-  </tbody>
-</table>
+
+<form action="{{route('inserirrecomendacao.index')}}" method="POST">
+@csrf()
+<textarea class="botao" name="recomendacoes" rows="5" cols="33" placeholder="Insira a recomendação"></textarea>
+<button class="botao" type="submit">Enviar</button>
+</form>
 
 <style>
     *{
@@ -33,8 +23,17 @@
         height: 12vh;
         font-family: 'Fredoka One', cursive;
         color: white;
-    }    
-    
+    }
+
+    button {
+        background-color: #C4FF10;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
     form {
             margin-bottom: 20px;
         }

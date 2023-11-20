@@ -1,17 +1,26 @@
 <h1>FÁBRICA DE SORRISOS</h1>
-<table width="100%" border="1px">
+<table width=200 height=100 border="1px">
   <thread>
-    <th>Data</th>
-    <th>Hora de início</th>
-    <th>Hora de término</th>
+    <th>TITULO</th>
+    <th>fotos</th>
+    
   </thread>
   <tbody>
         @foreach($forms as $forms)
+            <?php
+            $a=$forms->lista_comidas;
+            $b=$forms->lista_bebidas;?>
            <tr>
-            <td>{{$forms->data}}</td>
-            <td>{{$forms->hora_inicial}}</td>
-            <td>{{$forms->hora_final}}</td>
-           </tr>
+            <td>{{$forms->titulo}}</td>
+            <td> <img src="{{url("storage/{$forms->Foto1} ")}}" widht=200 height=100 /> </td>
+            <td> <img src="{{url("storage/{$forms->Foto2} ")}}" widht=200 height=100 /> </td>
+            <td> <img src="{{url("storage/{$forms->Foto3} ")}}" widht=200 height=100 /> </td>
+            <td><?php echo($a)?></td>
+            <td><?php echo ($b)?></td>
+            <td>{{$forms->preço}}</td>
+            </td>
+            </tr>
+            
         @endforeach
   </tbody>
 </table>

@@ -1,7 +1,11 @@
 <h1>FÁBRICA DE SORRISOS</h1>
 
-<a class="botao" id="login" href="{{route('login.index')}}">LOGIN</a>
-<a class="botao" id="agenda" href="{{route('agenda.index')}}">AGENDA</a>
+<form action="{{route('atualizarrecomendacao.index',$recomend->id)}}" method="POST">
+@method('put')
+@csrf()
+<textarea class="botao" name="recomendacoes" rows="5" cols="33" placeholder="Insira a recomendação"></textarea>
+<button type="submit">Enviar</button>
+</form>
 
 <style>
     *{
@@ -21,26 +25,22 @@
         font-family: 'Fredoka One', cursive;
         color: white;
     }
-
     .botao {
         display: inline-block; /* Transforma o link em um elemento de bloco */
         padding: 10px 20px; /* Adapte o preenchimento conforme necessário */
         text-decoration: none; /* Remove o sublinhado padrão dos links */
-        background-color: #4CAF50; /* Cor de fundo */
-        color: #fff; /* Cor do texto */
+        background-color: white; /* Cor de fundo */
+        color: #000; /* Cor do texto */
         font-size: 16px; /* Tamanho da fonte */
         border-radius: 5px; /* Borda arredondada */
         transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
     }
-
-    #login {
-        position: absolute;
-        left: 550px;
-        top: 300px;
-    }
-
-    #agenda {
-        position: absolute;
-        left: 850px;
-        top: 300px;
+    
+    button {
+        background-color: #C4FF10;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }

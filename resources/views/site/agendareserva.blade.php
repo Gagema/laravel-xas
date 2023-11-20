@@ -11,6 +11,7 @@
             <td>{{$forms->data}}</td>
             <td>{{$forms->hora_inicial}}</td>
             <td>{{$forms->hora_final}}</td>
+            <td><a href="{{route('fazerreserva.index', [$forms->id,$usu->nome] )}}">Escolher data</a></td>
            </tr>
         @endforeach
   </tbody>
@@ -59,3 +60,4 @@
         tr:hover {
             background-color: #f5f5f5;
         }
+        

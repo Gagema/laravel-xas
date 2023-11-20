@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foods', function (Blueprint $table) {
+        Schema::create('opinioes', function (Blueprint $table) {
             $table->id();
-            $table->string("titulo");
-            $table->string("Foto1");
-            $table->string("Foto2");
-            $table->string("Foto3");
-            $table->string("lista_comidas");
-            $table->string("lista_bebidas");
-            $table->float("preço");
+            $table->string('nome_aniversariante');
+            $table->enum('resultado',['Muito bom','Bom','Regular','Ruim','Muito ruim']);
+            $table->string('justifique');
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('foods');
+        Schema::dropIfExists('opinioes');
     }
 };

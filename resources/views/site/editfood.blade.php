@@ -1,11 +1,13 @@
 <h1>FÁBRICA DE SORRISOS</h1>
-<form action="{{route('foodintro.index')}}" method="POST" enctype="multipart/form-data">
-    @csrf()
+<h2>Data {{$form->id}}</h2>
+<form action="{{route('editarfood.index', $form->id)}}" method="POST" enctype="multipart/form-data">
+    @csrf()  
+    @method('put')
     <input class="botao" type="file" name="Foto1">
     <input class="botao" type="file" name="Foto2">
     <input class="botao" type="file" name="Foto3">
     <input class="botao" type="text" name="titulo" placeholder="Título do pacote">
-    <input class="botao" type="number" name="preço" placeholder="preço do pacote">
+    <input class="botao" type="number" name="preço" placeholder="Preço do pacote">
     <div id="lista de comidas">
     <p> Insira a lista de comidas</p>
     <textarea id="editor" name="lista_comidas"></textarea>
@@ -64,5 +66,9 @@
     }
 
     p {
+        color: white;
+    }
+
+    h2 {
         color: white;
     }
