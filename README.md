@@ -81,3 +81,12 @@ php artisan storage:link
 
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
+
+Link para o figma
+```sh
+https://www.figma.com/file/5Tt4yjaeSHMv8iVAHGtPLa/Untitled?type=design&node-id=0%3A1&mode=design&t=FLz06wbwi6tZyFBi-1
+```
+Link para o Notion
+```sh
+https://www.notion.so/82da9a555b394746a6b1111b8944de60?v=d6f587d3ac784be29a25e4a8d0e06281
+```
